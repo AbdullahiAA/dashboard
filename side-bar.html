@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SideBar Nav</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Girassol&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gelasio:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Piazzolla:wght@500&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="css/sidebar.css">
+</head>
+<body>
+    <!-- SideBar Toggle Start -->
+    <input type="checkbox" id="menu_toggle" hidden checked>
+    <!-- SideBar Toggle End -->
+
+    <!-- Header Start -->
+    <header>
+        <div class="left_area">
+            <a href="#">
+                <h3 title="The Noble Standard Schools - Payment Records">TNSS <span>Payment Records</span></h3>
+            </a>
+        </div>
+
+        <div class="right_area">
+            <a href="#" class="sign_out">Sign out</a>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Menu Icon Start -->
+    <label for="menu_toggle" class="menu_icon">
+        <i class="fas fa-arrow-left menu_arrow"></i>
+        <i class="fas fa-bars menu_bars"></i>
+    </label>
+    <!-- Menu Icon End -->
+
+    <!-- SideBar Start -->
+    <aside class="sidebar">
+        <div class="profile">
+            <img class="profile_image" src="images/emoji.jpg" alt="Profile Photo" width="100px" height="100px">
+            <h4 class="username">TechPro</h4>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#"><i class="fas fa-desktop"></i> <span>Dashboard</span></a></li>
+                <!-- 
+                    Dashboard
+                    ______________________
+    
+                    - Ability to the summary of the transactions (present day & yesterday)
+                    - Ability to contain all the shortcuts to the necessary pages
+                    
+                 -->
+                <li><a href="#"><i class="fas fa-comments-dollar"></i> <span>Transactions</span></a></li>
+                <!-- <li><a href="#">Post transaction</a></li> -->
+                <!-- 
+                    Post Transaction
+                    ______________________
+    
+                    - Ability to search for the student to post for
+                    - Ability to verify the student details before posting (Showing of the student's picture)
+                    - Ability to select the payment mode i.e cash/transfer
+                    - Ability to accept the analysis of the payment been paid
+                    - Ability to show the analysis of the categories where the money will be posted to
+                    - Ability to show the student's debt at all the categories (Sch Fee, Lesson Fee etc)
+                    - Ability to auto generate and print the reciept
+                    - Ability to add a new student if it does not appear in the list
+    
+                 -->
+                <!-- <li><a href="#">Transaction History</a></li> -->
+                <!-- 
+                    Transaction History
+                    ______________________
+    
+                    - Ability to show the daily transaction history
+                    - Ability to show all the transaction history
+                    - Ability to filter the transaction history by
+                        - Session
+                        - Term
+                        - Month
+                        - Week
+                        - Day
+                        - Today
+                        - Yesterday
+                        - Date range
+                        - Student
+                        - Family
+                    - Ability to download the current transaction history to a PDF Format
+                    - Ability to print the current transaction history
+    
+                 -->
+                <!-- <li><a href="#">Add Payment Category</a></li> -->
+                <li><a href="#"><i class="fas fa-user-graduate"></i> <span>Students</span></a></li>
+                <li><a href="#"><i class="fas fa-users"></i> <span>Users</span></a></li>
+                <li><a href="#"><i class="fas fa-cog"></i> <span>Settings</span></a></li>
+                <li><a href="#"><i class="fas fa-power-off"></i> <span>Sign Out</span></a></li>
+            </ul>
+        </nav>
+    </aside>
+    <!-- SideBar End -->
+
+    <!-- Main Start -->
+    <main class="dashboard">
+        <!-- Dashboard Header Start -->
+        <div class="dashboard-header">
+            <h1>Dashboard</h1>
+            <p>Welcome to TNSS Payment Record, <span>TechPro</span></p>
+            <hr>
+        </div>
+        <!-- Dashboard Header End -->
+
+
+        <!-- Cards: Level One Start -->
+        <div class="cards-level-one">
+            <article>
+                <h1>Today (Cash)</h1>
+                <p>NGN 124,560</p>
+            </article>
+            <article>
+                <h1>Today (Transfer)</h1>
+                <p>NGN 70,500</p>
+            </article>
+            <article>
+                <h1>Yesterday (Cash)</h1>
+                <p>NGN 144,550</p>
+            </article>
+            <article>
+                <h1>Yesterday (Transfer)</h1>
+                <p>NGN 57,800</p>
+            </article>
+        </div>
+        <!-- Cards: Level One End -->
+
+
+        <!-- Cards: Level Two Start -->
+        <div class="cards-level-two">
+            <article>
+                <div class="article-header">
+                    <h2>Transactions</h2>
+                </div>
+                <div class="article-body">
+                    <ul>
+                        <li><a href="#">Post transaction</a></li>
+                        <li><a href="#">Transaction History</a></li>
+                        <li><a href="#">Add Payment Category</a></li>
+                    </ul>
+                </div>
+            </article>
+            <article>
+                <div class="article-header">
+                    <h2>Students</h2>
+                </div>
+                <div class="article-body">
+                    <ul>
+                        <li><a href="#">Add Student</a></li>
+                        <li><a href="#">Search Student</a></li>
+                        <li><a href="#">Promote Students</a></li>
+                    </ul>
+                </div>
+            </article>
+            <article>
+                <div class="article-header">
+                    <h2>Users</h2>
+                </div>
+                <div class="article-body">
+                    <ul>
+                        <li><a href="#">Add User</a></li>
+                        <li><a href="#">Update User</a></li>
+                        <li><a href="#">Delete User</a></li>
+                    </ul>
+                </div>
+            </article>
+        </div>
+        <!-- Cards: Level Two End -->
+
+    </main>
+    <!-- Main End -->
+</body>
+</html>

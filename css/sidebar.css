@@ -1,0 +1,450 @@
+/* 
+#F6F7EB - Ivory
+#2F323A - Onyx
+#22242A - Raising Black
+#19B3D3 - Pacific Blue
+#0B87A6 - Blue Munsell
+#CCCCCC - Light Gray
+#222222 - Eerie Black
+
+*/
+
+
+/* Global Styles
+--------------------------------------------------- */
+
+*, *:after, *:before {
+    box-sizing: border-box;
+    /* margin: 0; */
+}
+
+body {
+    background-color: whitesmoke;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#menu_toggle {
+    display: none!Important;
+}
+
+/* Header Area
+--------------------------------------------------- */
+
+header {
+    background-color: #22242A;
+    color: rgb(245, 245, 247);
+    height: 70px;
+    padding: 20px;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left_area a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 22px;
+}
+
+.left_area span {
+    color: #19B3D3;
+}
+
+.left_area:hover a {
+    color: #19B3D3;
+}
+
+.left_area:hover span {
+    color: #fff;
+}
+
+.sign_out {
+    text-decoration: none;
+    background-color: #19B3D3;
+    color: #fff;
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 500;
+    transition: 0.3s;
+    transition-property: background-color;
+    margin-right: 10px;
+}
+
+.sign_out:hover {
+    background-color: #0B87A6;
+}
+
+
+/* SideBar Area
+--------------------------------------------------- */
+.sidebar {
+    background-color: #2F323A;
+    margin-top: 70px;
+    padding-top: 20px;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left:0 ;
+    z-index: 1;
+    overflow-y: auto;
+    transition: 0.5s;
+    transition-property: left;
+}
+
+.profile {
+    text-align: center;
+}
+
+.profile .profile_image {
+    width: 100px;
+    height: 100px;
+    border-radius:100px;
+    margin-bottom: 10px;
+}
+
+.profile .username {
+    color: #19B3D3;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    /* font-weight: 500; */
+}
+
+nav {
+    padding: 0 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    width: 100%;
+    padding-left: 20px;
+    line-height: 60px;
+    box-sizing: border-box;
+    transition: 0.3s;
+    transition-property: background-color;
+    font-weight: 500;
+}
+
+nav ul a:hover {
+    background-color: #0B87A6;
+    color: #F6F7EB;
+    border-radius: 0px;
+}
+
+nav ul i {
+    margin-right: 10px;
+}
+
+.menu_icon {
+    /* box-sizing: border-box; */
+    background-color: #2F323A;
+    opacity: .5;
+    position: fixed;
+    top: 75px;
+    left: 243px;
+    display: inline-block;
+    z-index: 99;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    transition: 0.55s;
+    transition-property: left;
+}
+
+.menu_icon i {
+    font-size: 20px;
+    color: #fff;
+    padding: 10px;
+    /* padding-left: 4px; */
+    cursor: pointer;
+    transition: 0.5s;
+    transition-property: color;
+}
+
+.menu_icon i:hover {
+    color: #19B3D3;
+}
+
+.menu_icon .menu_bars {
+    display: none;
+}
+
+
+/* When SideBar is Toggled
+--------------------------------------------------- */
+
+#menu_toggle:checked ~ .sidebar {
+    left: -190px;
+}
+
+#menu_toggle:checked ~ .sidebar a span {
+    display: none;
+}
+
+#menu_toggle:checked ~ .sidebar a {
+    font-size: 20px;
+    margin-left: 180px;
+    width: 60px;
+    /* transition: 0.5s; */
+    /* transition-property: prop; */
+}
+
+#menu_toggle:checked ~ .sidebar .profile {
+    display: none;
+}
+
+#menu_toggle:checked ~ .sidebar nav {
+    margin-top: 70px;
+}
+
+#menu_toggle:checked ~ .menu_icon {
+    left: 12px;
+    /* background-color: #ccc; */
+    opacity: 1;
+    border-radius: 100px;
+}
+
+#menu_toggle:checked ~ .menu_icon .menu_arrow {
+    display: none;
+}
+
+#menu_toggle:checked ~ .menu_icon .menu_bars {
+    display: inline-block;
+    /* padding: 10px; */
+}
+
+#menu_toggle:checked ~ main {
+    margin-left: 60px;
+}
+
+
+
+/* Main Area
+--------------------------------------------------- */
+main {
+    margin-top: 70px;
+    margin-left: 250px;
+    padding: 20px;
+    transition: 0.5s;
+    transition-property: margin-left;
+}
+
+.dashboard-header {
+    margin-bottom: 20px;
+}
+
+.dashboard-header h1 {
+    color: #19B3D3;
+    font-size: 25px;
+    /* font-weight: normal; */
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-family: 'Sansita Swased', cursive;
+    /* font-family: 'Girassol', cursive; */
+}
+
+.dashboard-header p {
+    color: #555557;
+    font-size: 12px;
+    margin-top: 0;
+    /* font-style: italic; */
+}
+
+.cards-level-one {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.cards-level-one article {
+    flex: 1 1 200px;
+    height: 150px;
+    background-color: azure;
+    border: 1px solid rgb(227, 240, 240);
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+}
+
+.cards-level-one article:nth-child(1) {
+    background-color: rgb(71, 145, 255);
+}
+
+.cards-level-one article:nth-child(2) {
+    background-color: rgb(204, 235, 67);
+}
+
+.cards-level-one article:nth-child(3) {
+    background-color: rgb(187, 71, 255);
+}
+
+.cards-level-one article:nth-child(4) {
+    background-color: rgb(245, 215, 41);
+}
+
+.cards-level-one h1 {
+    font-weight: 400;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    /* font-family: 'Sansita Swashed', cursive; */
+    font-family: 'Girassol', cursive;
+    font-family: 'Piazzolla', serif;
+
+}
+
+.cards-level-one p {
+    font-size: 22px;
+    color: white;
+    font-family: 'Girassol', cursive;
+    font-family: 'Gelasio', serif;
+    font-family: 'Piazzolla', serif;
+
+}
+
+.cards-level-two {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.cards-level-two article {
+    flex: 1 1 200px;
+    background-color: rgb(237, 237, 237);
+    border-radius: 5px;
+}
+
+.cards-level-two article .article-header {
+    background-color: lightgrey;
+    padding: 10px 20px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.cards-level-two article .article-header h2 {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 500;
+    color: rgb(92, 104, 116);
+    text-transform: uppercase;
+    font-family: 'Sansita Swashked', cursive;
+
+}
+
+.cards-level-two article .article-body {
+    padding: 20px;
+}
+
+.cards-level-two article .article-body ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cards-level-two article .article-body ul li a {
+    text-decoration: none;
+    display: block;
+    padding: 15px 20px;
+    border: 1px solid thistle;
+    margin: 5px;
+}
+
+
+
+
+/* Responsive Designs
+--------------------------------------------------- */
+@media screen and (max-width: 500px) {
+    .right_area {
+        display: none;
+    }
+
+    .left_area a {
+        font-size: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+.sign-out {
+    height: 30px;
+    padding: 5px 15px;
+    background-color: firebrick;
+    text-align: center;
+    display: block;
+}
+
+.sign-out:hover {
+    background-color: tomato;
+}
+
+nav {
+    background-color: darkslateblue;
+    height: calc(100vh - 40px);
+    width: 200px;
+}
+
+nav ul li {
+    list-style: none;
+    
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block;
+    color: rgb(245, 245, 247);
+    z-index: 100;
+}
+
+nav ul li a:hover, nav ul li a:active {
+    background-color: rgb(131, 128, 155);
+    font-weight: bolder;
+    font-size: 1.1em;
+}
+
+@media (max-width: 500px) {
+    nav {
+        width: 80vw;
+    }
+}
